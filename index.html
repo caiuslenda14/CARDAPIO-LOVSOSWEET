@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LOV SO SWEET🍩</title>
+    <title>CARDÁPIO</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -14,7 +15,7 @@
         <img src="top.svg" alt="">
         <h1>LOV SO SWEET🍩</h1>
     </div>
-<!-- SLOGAN PC E DEVICE -->
+    <!-- SLOGAN PC E DEVICE -->
     <div class="sloganpc"></div>
     <div class="slogandv">
         <button id="empada-button">EMPADAS</button>
@@ -23,36 +24,52 @@
 
     <div class="produtos">
         <div class="produto">
-            <img
-                    src="https://www.receitasnestle.com.br/sites/default/files/srh_recipes/1a884bcbc5b04d71476d2995d51d0140.jpg"
-                    alt="Brigadeiro">
             <h3>Brigadeiro</h3>
+            <img src="https://www.receitasnestle.com.br/sites/default/files/srh_recipes/1a884bcbc5b04d71476d2995d51d0140.jpg"
+                alt="Brigadeiro">
             <p>Delicioso brigadeiro caseiro feito com amor.</p>
-            <button id="brigChoc1" onclick="brigChoc1()">+1</button>
-            <button id="brigChoc0" onclick="brigChoc0()">-1</button>
+            <button id="brigChoc1" onclick="brigChoc1()">+2</button>
+            <button id="brigChoc0" onclick="brigChoc0()">-2</button>
         </div>
         <div class="produto" id="trufas">
             <img src="https://i.ytimg.com/vi/7TlocZ04Dtk/maxresdefault.jpg" alt="Trufa">
             <h3>Trufa</h3>
             <p>Trufas recheadas com os melhores ingredientes.</p>
-            
-            <button id="brigChoc1" onclick="trufa1()">+1</button>
-            <button id="brigChoc0" onclick="trufa0()">-1</button>
+
+            <button id="brigChoc1" onclick="trufa1()">+2</button>
+            <button id="brigChoc0" onclick="trufa0()">-2</button>
         </div>
+
         <div class="produto" id="empadas">
-            <h3 >Empada</h3>
+            <h3>Empada</h3>
             <img src="https://i.panelinha.com.br/i1/bk-5803-receita.webp" alt="">
             <p>Empadas artesanais crocantes e recheadas.</p>
-            <button id="empada1" onclick="empada1()">+1</button>
-            <button id="empada0" onclick="empada0()">-1</button>
+            <button id="empada1" onclick="empada1()">+2</button>
+            <button id="empada0" onclick="empada0()">-2</button>
         </div>
     </div>
     <div class="fundo">
         <div class="botao-comprar">
             <p>TOTAL DE ITENS:</p>
             <p id="totalItem"></p>
+            <button id="revisarPedido" onclick="revisarPedido()">Ver Pedido<i class="fa fa-shopping-bag"
+                    style="font-size:24px"></i></button>
+            <button onclick="resetarPedido()" id="resetarPedido"><i class="fa fa-trash-o"
+                    style="font-size:24px;"></i></button>
             <button onclick="comprar()">Comprar</button>
-        </div></div>
+
+        </div>
+    </div>
+
+    <div class="rodape">
+        <a href="sn.html">SOBRE NÓS</a><a href="https://wa.me/86995633313" target="_blank">DESENVOLVIDO POR caiuslenda14</a>
+    </div>
+
+
+    <dialog>
+        <p id="resumoGeral"></p><button id="closeInfo"><i class="fa fa-close" style="font-size:24px"></i></button>
+    </dialog>
+
     <script src="script.js"></script>
 </body>
 
