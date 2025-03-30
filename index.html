@@ -13,13 +13,14 @@
     <div class="top">
         <img src="top.svg" alt="">
         <h1>LOV SO SWEET🍩</h1>
-        <h1><a href="https://wa.me/558681400374" target="_blank">WHATSAPP</a>
-            <a href="http://https://www.instagram.com/lovsosweet_/" target="_blank"
-                rel="noopener noreferrer">INSTAGRAM</a><span><a href="sn.html">SOBRE NÓS</a></span>
-        </h1>
     </div>
-    <div class="slogan"><a href="https://wa.me/558681400374" target="_blank">FAÇA SEU PEDIDO AGORA MESMO PELO
-            WHATSAPP!</a></div>
+<!-- SLOGAN PC E DEVICE -->
+    <div class="sloganpc"></div>
+    <div class="slogandv">
+        <button id="empada-button">EMPADAS</button>
+        <button id="trufa-button">TRUFAS</button>
+    </div>
+
     <div class="produtos">
         <div class="produto">
             <img
@@ -30,17 +31,17 @@
             <button id="brigChoc1" onclick="brigChoc1()">+1</button>
             <button id="brigChoc0" onclick="brigChoc0()">-1</button>
         </div>
-        <div class="produto">
-            <a href="https://wa.me/558695633313?text=Olá!%20Gostaria%20de%20fazer%20um%20pedido%20de%20trufa" target="_blank" rel="noopener noreferrer"><img src="https://i.ytimg.com/vi/7TlocZ04Dtk/maxresdefault.jpg" alt="Trufa"></a>
+        <div class="produto" id="trufas">
+            <img src="https://i.ytimg.com/vi/7TlocZ04Dtk/maxresdefault.jpg" alt="Trufa">
             <h3>Trufa</h3>
             <p>Trufas recheadas com os melhores ingredientes.</p>
             
             <button id="brigChoc1" onclick="trufa1()">+1</button>
             <button id="brigChoc0" onclick="trufa0()">-1</button>
         </div>
-        <div class="produto">
-            <a href="https://wa.me/558695633313?text=Olá!%20Gostaria%20de%20fazer%20um%20pedido%20de%20empada" target="_blank" rel="noopener noreferrer"><img src="https://i.panelinha.com.br/i1/bk-5803-receita.webp" alt=""></a>
-            <h3>Empada</h3>
+        <div class="produto" id="empadas">
+            <h3 >Empada</h3>
+            <img src="https://i.panelinha.com.br/i1/bk-5803-receita.webp" alt="">
             <p>Empadas artesanais crocantes e recheadas.</p>
             <button id="empada1" onclick="empada1()">+1</button>
             <button id="empada0" onclick="empada0()">-1</button>
