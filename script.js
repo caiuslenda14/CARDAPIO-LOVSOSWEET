@@ -48,6 +48,25 @@ function empada0() {
     atualizarTotal();
 }
 
+// Função para resetar a quantidade do Brigadeiro de Chocolate
+function resetBrigChoc() {
+    brigChoc = 0;
+    atualizarTotal();  // Atualiza o total após o reset
+}
+
+// Função para resetar a quantidade da Trufa
+function resetTrufa() {
+    trufa = 0;
+    atualizarTotal();  // Atualiza o total após o reset
+}
+
+// Função para resetar a quantidade da Empada
+function resetEmpada() {
+    empada = 0;
+    atualizarTotal();  // Atualiza o total após o reset
+}
+
+
 // Função para enviar o pedido pelo WhatsApp
 function comprar() {
     if (brigChoc === 0 && trufa === 0 && empada === 0) {

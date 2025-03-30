@@ -30,6 +30,7 @@
             <p>Delicioso brigadeiro caseiro feito com amor.</p>
             <button id="brigChoc1" onclick="brigChoc1()">+2</button>
             <button id="brigChoc0" onclick="brigChoc0()">-2</button>
+            <button onclick="resetBrigChoc()"><i class="fa fa-trash-o" style="font-size:24px;"></i></button>
         </div>
         <div class="produto" id="trufas">
             <img src="https://i.ytimg.com/vi/7TlocZ04Dtk/maxresdefault.jpg" alt="Trufa">
@@ -38,6 +39,7 @@
 
             <button id="brigChoc1" onclick="trufa1()">+2</button>
             <button id="brigChoc0" onclick="trufa0()">-2</button>
+            <button onclick="resetTrufa()"><i class="fa fa-trash-o" style="font-size:24px;"></i></button>
         </div>
 
         <div class="produto" id="empadas">
@@ -46,28 +48,28 @@
             <p>Empadas artesanais crocantes e recheadas.</p>
             <button id="empada1" onclick="empada1()">+2</button>
             <button id="empada0" onclick="empada0()">-2</button>
+            <button onclick="resetEmpada()"><i class="fa fa-trash-o" style="font-size:24px;"></i></button>
         </div>
     </div>
     <div class="fundo">
         <div class="botao-comprar">
-            <p>TOTAL DE ITENS:</p>
-            <p id="totalItem"></p>
             <button id="revisarPedido" onclick="revisarPedido()">Ver Pedido<i class="fa fa-shopping-bag"
                     style="font-size:24px"></i></button>
-            <button onclick="resetarPedido()" id="resetarPedido"><i class="fa fa-trash-o"
-                    style="font-size:24px;"></i></button>
-            <button onclick="comprar()">Comprar</button>
+            <button onclick="resetarPedido()" id="resetarPedido class=" botaoVerApagar"i class="fa fa-trash-o"
+                style="font-size:24px;"></i></button>
+            <button onclick="comprar()" class="botaoVerApagar">Realizar Pedido</button>
 
         </div>
     </div>
 
     <div class="rodape">
-        <a href="sn.html">SOBRE NÓS</a><a href="https://wa.me/86995633313" target="_blank">DESENVOLVIDO POR caiuslenda14</a>
+        <a href="sn.html">SOBRE NÓS</a><br><a href="https://wa.me/86995633313" target="_blank">DESENVOLVIDO POR
+            caiuslenda14</a><br><a>LOV SO SWEET todos os direitos reservados.</a><br><a>2025</a>
     </div>
 
 
     <dialog>
-        <p id="resumoGeral"></p><button id="closeInfo"><i class="fa fa-close" style="font-size:24px"></i></button>
+        <p id="resumoGeral"></p><button id="closeInfo"><i class="fa fa-close" style="font-size:24px"></i></button><br>
     </dialog>
 
     <script src="script.js"></script>

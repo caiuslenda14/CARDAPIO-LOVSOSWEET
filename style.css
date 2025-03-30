@@ -140,7 +140,7 @@
     body {
         background-image: url(background2.png);
         background-size: 400%;
-        margin-bottom: 60%;
+        margin-bottom: 30%;
     }
 
     .top {
@@ -239,7 +239,7 @@
         bottom: 0;
         left: 0;
         width: 82%;
-        padding: 15px;
+        padding: 5px;
         background-color: #f57280;
         color: white;
         text-align: center;
@@ -251,7 +251,7 @@
             margin: 5px;
             padding: 5px;
             border-radius: 15px;
-            width: 150px;
+            width: 2fr;
             font-size: 20px;
             color: #f57280;
             background-color: #ffffff;
@@ -261,16 +261,15 @@
                 background-color: #974a52;
             }
         }
-
-        #resetarPedido {
-            width: 100px;
+        .botaoVerApagar{
+            width: 1fr 2fr;
         }
 
 
         button {
             padding: 5px;
             border-radius: 15px;
-            width: 150px;
+            width: 2fr;
             font-size: 25px;
             color: #f57280;
             background-color: #ffffff;
@@ -344,6 +343,8 @@
         background-color: rgb(255, 255, 255);
 
         a {
+            font-size: 14px;
+            font-family: arial;
             margin-left: 5px;
             font-weight: 800;
             color: #f57280;
