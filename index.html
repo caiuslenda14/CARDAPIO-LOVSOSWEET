@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOV SO SWEET🍩</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="top">
+        <img src="top.svg" alt="">
+        <h1>LOV SO SWEET🍩</h1>
+        <h1><a href="https://wa.me/558681400374" target="_blank">WHATSAPP</a>
+            <a href="http://https://www.instagram.com/lovsosweet_/" target="_blank"
+                rel="noopener noreferrer">INSTAGRAM</a>
+        </h1>
+    </div>
+    <div class="slogan"><a href="https://wa.me/558681400374" target="_blank">FAÇA SEU PEDIDO AGORA MESMO PELO
+            WHATSAPP!</a></div>
+    <div class="produtos">
+        <div class="produto">
+            <img
+                    src="https://www.receitasnestle.com.br/sites/default/files/srh_recipes/1a884bcbc5b04d71476d2995d51d0140.jpg"
+                    alt="Brigadeiro">
+            <h3>Brigadeiro</h3>
+            <p>Delicioso brigadeiro caseiro feito com amor.</p>
+            <button id="brigChoc1" onclick="brigChoc1()">+1</button>
+            <button id="brigChoc0" onclick="brigChoc0()">-1</button>
+        </div>
+        <div class="produto">
+            <a href="https://wa.me/558695633313?text=Olá!%20Gostaria%20de%20fazer%20um%20pedido%20de%20trufa" target="_blank" rel="noopener noreferrer"><img src="https://i.ytimg.com/vi/7TlocZ04Dtk/maxresdefault.jpg" alt="Trufa"></a>
+            <h3>Trufa</h3>
+            <p>Trufas recheadas com os melhores ingredientes.</p>
+            
+            <button id="brigChoc1" onclick="trufa1()">+1</button>
+            <button id="brigChoc0" onclick="trufa0()">-1</button>
+        </div>
+        <div class="produto">
+            <a href="https://wa.me/558695633313?text=Olá!%20Gostaria%20de%20fazer%20um%20pedido%20de%20empada" target="_blank" rel="noopener noreferrer"><img src="https://i.panelinha.com.br/i1/bk-5803-receita.webp" alt=""></a>
+            <h3>Empada</h3>
+            <p>Empadas artesanais crocantes e recheadas.</p>
+            <button id="empada1" onclick="empada1()">+1</button>
+            <button id="empada0" onclick="empada0()">-1</button>
+        </div>
+    </div>
+    <div class="botao-comprar">
+        <p>TOTAL DE ITENS:</p>
+        <p id="totalItem"></p>
+        <button onclick="comprar()">Comprar</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
