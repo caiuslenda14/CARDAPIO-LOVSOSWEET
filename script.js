@@ -1,20 +1,20 @@
 let brigChoc = 0;
-let trufa = 0;
-let empada = 0;
+let brigBeij = 0;
+let BrigNinh = 0;
 
 // Preços dos itens
-const precoBrigChoc = 2.50;
-const precoTrufa = 3.00;
-const precoEmpada = 5.00;
+const precoBrigChoc = 3.00;
+const precoBrigBeij = 3.00;
+const precoBrigNinh = 3.00;
 
 function atualizarTotal() {
-    let totalItens = brigChoc + trufa + empada;
-    let valorTotal = (brigChoc * precoBrigChoc) + (trufa * precoTrufa) + (empada * precoEmpada);
+    let totalItens = brigChoc + brigBeij + BrigNinh;
+    let valorTotal = (brigChoc * precoBrigChoc) + (brigBeij * precoBrigBeij) + (BrigNinh * precoBrigNinh);
 
     let visor = document.getElementById("totalItem");
     visor.innerHTML = `Total de Itens: ${totalItens} | Valor Total: R$ ${valorTotal.toFixed(2)}`;
 
-    console.log("BRIGADEIRO=" + brigChoc, "TRUFA=" + trufa, "EMPADA=" + empada);
+    console.log("CHOCOLATE=" + brigChoc, "BEIJINHO=" + brigBeij, "NINHO=" + BrigNinh);
 }
 
 // Funções de manipulação de itens
@@ -28,23 +28,23 @@ function brigChoc0() {
     atualizarTotal();
 }
 
-function trufa1() {
-    trufa += 2;
+function brigBeij1() {
+    brigBeij += 2;
     atualizarTotal();
 }
 
-function trufa0() {
-    trufa = Math.max(0, trufa - 2);
+function brigBeij0() {
+    brigBeij = Math.max(0, brigBeij - 2);
     atualizarTotal();
 }
 
-function empada1() {
-    empada += 2;
+function brigNinh1() {
+    BrigNinh += 2;
     atualizarTotal();
 }
 
-function empada0() {
-    empada = Math.max(0, empada - 2);
+function brigNinh0() {
+    BrigNinh = Math.max(0, BrigNinh - 2);
     atualizarTotal();
 }
 
@@ -55,37 +55,37 @@ function resetBrigChoc() {
 }
 
 // Função para resetar a quantidade da Trufa
-function resetTrufa() {
-    trufa = 0;
+function resetBrigBeij() {
+    brigBeij = 0;
     atualizarTotal();  // Atualiza o total após o reset
 }
 
 // Função para resetar a quantidade da Empada
-function resetEmpada() {
-    empada = 0;
+function resetBrigNinh() {
+    BrigNinh = 0;
     atualizarTotal();  // Atualiza o total após o reset
 }
 
 
 // Função para enviar o pedido pelo WhatsApp
 function comprar() {
-    if (brigChoc === 0 && trufa === 0 && empada === 0) {
+    if (brigChoc === 0 && brigBeij === 0 && BrigNinh === 0) {
         alert("Você precisa selecionar pelo menos um item antes de comprar.");
         return;
     }
 
-    let valorTotal = (brigChoc * precoBrigChoc) + (trufa * precoTrufa) + (empada * precoEmpada);
+    let valorTotal = (brigChoc * precoBrigChoc) + (brigBeij * precoBrigBeij) + (BrigNinh * precoBrigNinh);
 
     let mensagem = `Olá, gostaria de fazer um pedido:\n\n`;
     if (brigChoc > 0) mensagem += `🍫 Brigadeiro: ${brigChoc} (R$ ${(brigChoc * precoBrigChoc).toFixed(2)})\n`;
-    if (trufa > 0) mensagem += `🍬 Trufa: ${trufa} (R$ ${(trufa * precoTrufa).toFixed(2)})\n`;
-    if (empada > 0) mensagem += `🥟 Empada: ${empada} (R$ ${(empada * precoEmpada).toFixed(2)})\n`;
+    if (brigBeij > 0) mensagem += `🥥 Beijinho: ${brigBeij} (R$ ${(brigBeij * precoBrigBeij).toFixed(2)})\n`;
+    if (BrigNinh > 0) mensagem += `🐮 Ninho: ${BrigNinh} (R$ ${(BrigNinh * precoBrigNinh).toFixed(2)})\n`;
 
-    mensagem += `\nTotal de itens: ${brigChoc + trufa + empada}\n`;
+    mensagem += `\nTotal de itens: ${brigChoc + brigBeij + BrigNinh}\n`;
     mensagem += `Valor Total: R$ ${valorTotal.toFixed(2)}`;
 
     let mensagemEncoded = encodeURIComponent(mensagem);
-    let numeroWhatsapp = "558695633313";
+    let numeroWhatsapp = "558681400374";
     let url = `https://wa.me/${numeroWhatsapp}?text=${mensagemEncoded}`;
 
     window.open(url, "_blank");
@@ -105,8 +105,8 @@ document.getElementById('trufa-button').addEventListener('click', () => {
 function resetarPedido() {
     // Zera todos os itens
     brigChoc = 0;
-    trufa = 0;
-    empada = 0;
+    brigBeij = 0;
+    BrigNinh = 0;
 
     // Atualiza o total exibido na tela
     atualizarTotal();
@@ -124,14 +124,14 @@ button.onclick = function () {
     // INFO DO PEDIDO
     const h1Resumo = document.getElementById("resumoGeral");
     
-    let totalItens = brigChoc + trufa + empada;
-    let valorTotal = (brigChoc * precoBrigChoc) + (trufa * precoTrufa) + (empada * precoEmpada);
+    let totalItens = brigChoc + brigBeij + BrigNinh;
+    let valorTotal = (brigChoc * precoBrigChoc) + (brigBeij * precoBrigBeij) + (BrigNinh * precoBrigNinh);
     
     let resumo = `Resumo do Pedido:\n\n`;
 
-    if (brigChoc > 0) resumo += `🍫 Brigadeiros (R$ ${precoBrigChoc.toFixed(2)} cada): ${brigChoc} - R$ ${(brigChoc * precoBrigChoc).toFixed(2)}\n`;
-    if (trufa > 0) resumo += `🍬 Trufas (R$ ${precoTrufa.toFixed(2)} cada): ${trufa} - R$ ${(trufa * precoTrufa).toFixed(2)}\n`;
-    if (empada > 0) resumo += `🥟 Empadas (R$ ${precoEmpada.toFixed(2)} cada): ${empada} - R$ ${(empada * precoEmpada).toFixed(2)}\n`;
+    if (brigChoc > 0) resumo += `🍫 Chocolate (R$ ${precoBrigChoc.toFixed(2)} cada): ${brigChoc} - R$ ${(brigChoc * precoBrigChoc).toFixed(2)}\n`;
+    if (brigBeij > 0) resumo += `🥥 Beijinho (R$ ${precoBrigBeij.toFixed(2)} cada): ${brigBeij} - R$ ${(brigBeij * precoBrigBeij).toFixed(2)}\n`;
+    if (BrigNinh > 0) resumo += `🐮 Ninho (R$ ${precoBrigNinh.toFixed(2)} cada): ${BrigNinh} - R$ ${(BrigNinh * precoBrigNinh).toFixed(2)}\n`;
     if (totalItens > 0) {
         resumo += `\nTotal de Itens: ${totalItens} | Valor Total: R$ ${valorTotal.toFixed(2)}`;
     } else {
