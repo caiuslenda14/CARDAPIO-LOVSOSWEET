@@ -87,6 +87,9 @@
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
+        h2{
+            font-size: 20px;
+        }
     }
 
     .produto {
